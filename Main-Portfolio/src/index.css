@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-gray-900 text-white;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+
+  .animate-spin-reverse {
+    animation: spin 15s linear infinite reverse;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes showContent {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotateBorder {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .typewriter-text {
+    position: relative;
+    display: inline-block;
+    min-width: 250px;
+    min-height: 1.2em;
+    vertical-align: bottom;
+  }
+
+  .typewriter-role {
+    position: relative;
+    display: none;
+    color: transparent;
+    -webkit-text-stroke: 0.7px #7cf03d;
+    white-space: nowrap;
+    animation: displayText 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+  }
+
+  @keyframes displayText {
+    0%, 24% {
+      display: none;
+    }
+    25%, 49% {
+      display: inline-block;
+    }
+    50%, 99% {
+      display: none;
+    }
+    100% {
+      display: none;
+    }
+  }
+
+  .typewriter-role::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border-right: 2px solid #7cf03d;
+    color: #7cf03d;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fillText 4s linear infinite;
+  }
+
+  @keyframes fillText {
+    0%, 9% {
+      width: 0%;
+    }
+    10%, 69% {
+      width: 100%;
+    }
+    70%, 99% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+}
