@@ -29,19 +29,19 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'suriyakaant@example.com',
-      link: 'mailto:suriyakaant@example.com',
+      value: 'suriyakaantsr@gmail.com',
+      link: 'mailto:suriyakaantsr@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 XXXXXXXXXX',
-      link: 'tel:+91XXXXXXXXXX',
+      value: '8098089355',
+      link: 'tel:+918098089355',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Chennai, Tamil Nadu, India',
+      value: 'Chennai, India',
       link: '#',
     },
   ];

@@ -39,11 +39,11 @@ export default function Home() {
           </h2>
 
           <p className="text-base text-gray-300 mt-6 mb-8 leading-relaxed max-w-xl">
-            I am an aspiring Software and Business Systems Engineer with hands-on experience in
-            Python Full Stack Development, Data Analytics, and Embedded Systems. My passion lies
-            in developing intelligent, data-driven web applications and automation solutions, and
-            I actively seek opportunities to apply my technical, analytical, and creative skills
-            in real-world projects.
+            I am a driven and creative Computer Science and Business Systems Engineering student
+            with hands-on experience in full-stack development, IoT systems, embedded systems, and
+            data analytics. I specialize in building clean, user-centric applications with scalable
+            backend logic and modern UI/UX. I am passionate about combining technology and business
+            to create impactful real-world solutions.
           </p>
 
           <div className="flex items-center gap-8 mt-8">

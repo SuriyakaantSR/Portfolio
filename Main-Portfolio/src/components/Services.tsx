@@ -4,39 +4,39 @@ export default function Services() {
   const services = [
     {
       icon: Code,
-      title: 'Web Development',
+      title: 'Programming & Development',
       description:
-        'Building responsive and modern websites using the latest technologies like React, HTML5, CSS3, and JavaScript.',
+        'Python, JavaScript, Java, HTML, CSS, Node.js, React, and Flask for building scalable applications.',
     },
     {
       icon: Database,
-      title: 'Full Stack Development',
+      title: 'Data & Analytics',
       description:
-        'End-to-end application development with Python, Node.js, and modern databases for complete solutions.',
-    },
-    {
-      icon: Palette,
-      title: 'UI/UX Design',
-      description:
-        'Creating beautiful and intuitive user interfaces with a focus on user experience and modern design principles.',
-    },
-    {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description:
-        'Developing mobile-first, responsive websites that work seamlessly across all devices and screen sizes.',
-    },
-    {
-      icon: Globe,
-      title: 'Data Analytics',
-      description:
-        'Analyzing and visualizing data to provide actionable insights and drive intelligent business decisions.',
+        'Pandas, NumPy, Matplotlib, Seaborn, Plotly, SQLite, and MongoDB for data analysis and visualization.',
     },
     {
       icon: Cpu,
-      title: 'Embedded Systems',
+      title: 'Embedded & IoT',
       description:
-        'Working with IoT and embedded systems, integrating hardware with software for innovative solutions.',
+        'Arduino, ESP32, Embedded Systems, and IoT Prototyping for hardware-software integration projects.',
+    },
+    {
+      icon: Smartphone,
+      title: 'Tools & Platforms',
+      description:
+        'Git, GitHub, Visual Studio Code, Figma, Canva, and OpenCV for development and design workflows.',
+    },
+    {
+      icon: Globe,
+      title: 'Strengths',
+      description:
+        'Strong problem-solving, technical initiative, quick learning, leadership mindset, and excellent communication skills.',
+    },
+    {
+      icon: Palette,
+      title: 'Achievements',
+      description:
+        'Volunteered in major college technical events, contributed to open-source projects, and proposed business-tech innovation at Accenture.',
     },
   ];
 

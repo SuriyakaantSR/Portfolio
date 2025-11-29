@@ -4,19 +4,19 @@ export default function About() {
   const skills = [
     { name: 'Python', level: 90 },
     { name: 'JavaScript', level: 85 },
-    { name: 'React', level: 80 },
+    { name: 'React', level: 85 },
+    { name: 'Node.js', level: 80 },
     { name: 'HTML/CSS', level: 95 },
-    { name: 'Full Stack Development', level: 85 },
-    { name: 'Data Analytics', level: 75 },
-    { name: 'Adapting Technology', level: 80 },
-    { name: 'Web Development', level: 90 },
+    { name: 'MongoDB', level: 80 },
+    { name: 'ESP32/IoT', level: 85 },
+    { name: 'OpenCV', level: 80 },
   ];
 
   const education = [
     {
       degree: 'B.Tech in Computer Science and Business Systems',
-      institution: 'Rajalakshmi Institute of Technology',
-      year: 'First Year Student',
+      institution: 'Rajalakshmi Institute of Technology, Chennai',
+      year: '2022 – 2026',
       icon: GraduationCap,
     },
   ];
@@ -24,18 +24,18 @@ export default function About() {
   const expertise = [
     {
       title: 'Full Stack Development',
-      description: 'Building end-to-end web applications with modern technologies',
+      description: 'Building end-to-end web applications with React, Node.js, and modern databases',
       icon: Code,
     },
     {
-      title: 'Data Analytics',
-      description: 'Analyzing and visualizing data to drive intelligent decisions',
-      icon: Database,
+      title: 'IoT & Embedded Systems',
+      description: 'Developing IoT-enabled wearables and embedded systems with ESP32 and Arduino',
+      icon: Cpu,
     },
     {
-      title: 'Embedded Systems',
-      description: 'Working with hardware and software integration projects',
-      icon: Cpu,
+      title: 'Data Analytics',
+      description: 'Analyzing and visualizing data using Python, Pandas, and visualization libraries',
+      icon: Database,
     },
   ];
 
@@ -52,17 +52,19 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-white">
-              Software & Business Systems Engineer
+              About My Journey
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              As a first-year student at Rajalakshmi Institute of Technology, I'm pursuing my passion
-              for technology through Computer Science and Business Systems. I specialize in creating
-              innovative solutions that bridge the gap between business needs and technical implementation.
+              I am a driven and creative Computer Science and Business Systems Engineering student with
+              hands-on experience in full-stack development, IoT systems, embedded systems, and data analytics.
+              I specialize in building clean, user-centric applications with scalable backend logic and
+              modern UI/UX.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              My journey in technology is driven by curiosity and the desire to build impactful solutions.
-              I'm constantly learning and exploring new technologies, frameworks, and methodologies to
-              enhance my skill set and deliver exceptional results.
+              My passion lies in combining technology and business to create impactful real-world solutions.
+              I have practical experience as an Embedded System Design Intern at Camwear LLP, where I
+              developed IoT-enabled wearable prototypes and optimized communication protocols. I'm constantly
+              learning and exploring new technologies to enhance my skill set.
             </p>
 
             <div className="space-y-4 pt-4">
