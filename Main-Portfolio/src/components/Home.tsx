@@ -1,6 +1,56 @@
 import { Download, Github, Linkedin, Youtube, Hash, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+const roles = [
+  "Python Developer",
+  "Full Stack Web Developer",
+  "Youtuber",
+  "Computer Science and Business Systems Engineer"
+];
+
+function TypingAnimation() {
+  const [displayText, setDisplayText] = useState('');
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const typingSpeed = isDeleting ? 50 : 80;
+    const delay = isDeleting ? typingSpeed : 80;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < currentRole.length) {
+          setDisplayText(currentRole.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), 1000);
+        }
+      } else {
+        if (charIndex > 0) {
+          setDisplayText(currentRole.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, roleIndex, isDeleting]);
+
+  return (
+    <h2 className="text-2xl md:text-3xl font-semibold text-white">
+      I'm a{' '}
+      <span className="text-[#7cf03d] border-r-2 border-[#7cf03d] pr-1">
+        {displayText}
+      </span>
+    </h2>
+  );
+}
+
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,15 +78,7 @@ export default function Home() {
             Suriyakaant S R
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-semibold inline-block -mb-2.5 leading-snug">
-            <span className="text-white">I'm a </span>
-            <span className="typewriter-text">
-              <span className="typewriter-role" style={{ '--i': 5 } as React.CSSProperties} data-text="Full Stack Developer">Full Stack Developer</span>
-              <span className="typewriter-role" style={{ '--i': 4 } as React.CSSProperties} data-text="Python Developer">Python Developer</span>
-              <span className="typewriter-role" style={{ '--i': 3 } as React.CSSProperties} data-text="Freelancer">Freelancer</span>
-              <span className="typewriter-role" style={{ '--i': 2 } as React.CSSProperties} data-text="Youtuber">Youtuber</span>
-            </span>
-          </h2>
+          <TypingAnimation />
 
           <p className="text-base text-gray-300 mt-6 mb-8 leading-relaxed max-w-xl">
             I am a driven and creative Computer Science and Business Systems Engineering student
@@ -118,9 +160,11 @@ export default function Home() {
               }}
             ></div>
             <div className="relative w-full h-full bg-[#1f242d] rounded-full flex justify-center items-center z-[1] overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-[#7cf03d] text-6xl font-bold">
-                SS
-              </div>
+              <img
+                src="/11.png"
+                alt="Profile"
+                className="w-[32vw] h-[32vw] rounded-full object-cover select-none pointer-events-none"
+              />
             </div>
           </div>
         </div>

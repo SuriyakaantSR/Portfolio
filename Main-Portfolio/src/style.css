@@ -76,49 +76,22 @@ a {
 .home-info h1{
     font-size: 55px;   
 }
-.home-info h2 {
-    display: inline-block;
+.typing-title {
     font-size: 32px;
-    margin: -10px;
-    
+    font-weight: 600;
+    color: #fff;
 }
 
-.home-info h2 span {
-    position: relative;
+#typing {
+    color: #7cf03d;
+    border-right: 3px solid #7cf03d;
+    padding-right: 4px;
     display: inline-block;
-    color: transparent;
-    -webkit-text-stroke: .7px #7cf03d;
-    animation: display-text 16s linear infinite;
-    animation-delay: calc(-4s * var(--i));
+    animation: cursor .7s infinite;
 }
 
-@keyframes display-text {
-    25%,
-    100% {
-        display: none;
-         }
-}
-
-.home-info h2 span:before {
-    content: attr(data-text);
-    position: absolute;
-    width: 0;
-    border-right: 2px solid #7cf03d;
-    color:#7cf03d;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: fill-text 4s linear infinite;
-}
-
-@keyframes fill-text {
-    10%,
-    100% {
-        width: 0%;
-    }
-    70%,
-    90% {
-        width: 100%;
-    }
+@keyframes cursor {
+    50% { border-color: transparent; }
 }
 .home-info p {
     font-size: 16px;

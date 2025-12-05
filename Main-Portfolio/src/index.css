@@ -90,26 +90,30 @@
 
   .typewriter-role {
     position: relative;
-    display: none;
+    display: inline-block;
     color: transparent;
     -webkit-text-stroke: 0.7px #7cf03d;
     white-space: nowrap;
-    animation: displayText 16s linear infinite;
-    animation-delay: calc(-4s * var(--i));
+    animation: displayText 12s linear infinite;
+    animation-delay: calc(var(--i) * -3s);
   }
 
   @keyframes displayText {
-    0%, 24% {
-      display: none;
+    0%, 5% {
+      opacity: 0;
+      visibility: hidden;
     }
-    25%, 49% {
-      display: inline-block;
+    5%, 25% {
+      opacity: 1;
+      visibility: visible;
     }
-    50%, 99% {
-      display: none;
+    25%, 30% {
+      opacity: 0;
+      visibility: hidden;
     }
     100% {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 
@@ -123,21 +127,18 @@
     color: #7cf03d;
     white-space: nowrap;
     overflow: hidden;
-    animation: fillText 4s linear infinite;
+    animation: fillText 3s steps(30, end) infinite;
   }
 
   @keyframes fillText {
-    0%, 9% {
+    0% {
       width: 0%;
     }
-    10%, 69% {
-      width: 100%;
-    }
-    70%, 99% {
+    90% {
       width: 100%;
     }
     100% {
-      width: 0%;
+      width: 100%;
     }
   }
 }
